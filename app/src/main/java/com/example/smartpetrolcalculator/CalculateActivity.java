@@ -43,9 +43,14 @@ public class CalculateActivity extends AppCompatActivity {
 
         setupSpinners();
 
-        btnCalculate.setOnClickListener(v -> calculatePetrolCost());
+        btnCalculate.setOnClickListener(v -> {
+            Toast.makeText(CalculateActivity.this, "Calculate clicked!", Toast.LENGTH_SHORT).show();
+            calculatePetrolCost();
+        });
 
         btnBackHome.setOnClickListener(v -> {
+            Toast.makeText(CalculateActivity.this, "Back clicked!", Toast.LENGTH_SHORT).show();
+
             Intent intent = new Intent(CalculateActivity.this, MainActivity.class);
             startActivity(intent);
             finish();
@@ -137,6 +142,8 @@ public class CalculateActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         if (id == R.id.menu_home) {
+            Toast.makeText(this, "Home clicked!", Toast.LENGTH_SHORT).show();
+
             Intent intent = new Intent(CalculateActivity.this, MainActivity.class);
             startActivity(intent);
             finish();
@@ -149,12 +156,16 @@ public class CalculateActivity extends AppCompatActivity {
         }
 
         if (id == R.id.menu_about) {
+            Toast.makeText(this, "About clicked!", Toast.LENGTH_SHORT).show();
+
             Intent intent = new Intent(CalculateActivity.this, AboutActivity.class);
             startActivity(intent);
             return true;
         }
 
         if (id == R.id.menu_share) {
+            Toast.makeText(this, "Share clicked!", Toast.LENGTH_SHORT).show();
+
             Intent shareIntent = new Intent(Intent.ACTION_SEND);
             shareIntent.setType("text/plain");
             shareIntent.putExtra(Intent.EXTRA_SUBJECT, "Smart Petrol Calculator");
