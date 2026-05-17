@@ -93,7 +93,7 @@
                     android:id="@+id/txtGithub"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="https://github.com/YOUR_USERNAME/smart-petrol-calculator"
+                    android:text="https://github.com/nurinzakir-glitch/smart-petrol-calculator.git"
                     android:textSize="16sp"
                     android:textColor="#1565C0"
                     android:autoLink="web"
