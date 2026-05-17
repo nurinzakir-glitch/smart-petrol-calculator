@@ -28,11 +28,15 @@ public class MainActivity extends AppCompatActivity {
         btnGoAbout = findViewById(R.id.btnGoAbout);
 
         btnGoCalculate.setOnClickListener(v -> {
+            Toast.makeText(MainActivity.this, "Calculate clicked!", Toast.LENGTH_SHORT).show();
+
             Intent intent = new Intent(MainActivity.this, CalculateActivity.class);
             startActivity(intent);
         });
 
         btnGoAbout.setOnClickListener(v -> {
+            Toast.makeText(MainActivity.this, "About clicked!", Toast.LENGTH_SHORT).show();
+
             Intent intent = new Intent(MainActivity.this, AboutActivity.class);
             startActivity(intent);
         });
@@ -55,18 +59,24 @@ public class MainActivity extends AppCompatActivity {
         }
 
         if (id == R.id.menu_calculate) {
+            Toast.makeText(this, "Calculate clicked!", Toast.LENGTH_SHORT).show();
+
             Intent intent = new Intent(MainActivity.this, CalculateActivity.class);
             startActivity(intent);
             return true;
         }
 
         if (id == R.id.menu_about) {
+            Toast.makeText(this, "About clicked!", Toast.LENGTH_SHORT).show();
+
             Intent intent = new Intent(MainActivity.this, AboutActivity.class);
             startActivity(intent);
             return true;
         }
 
         if (id == R.id.menu_share) {
+            Toast.makeText(this, "Share clicked!", Toast.LENGTH_SHORT).show();
+
             Intent shareIntent = new Intent(Intent.ACTION_SEND);
             shareIntent.setType("text/plain");
             shareIntent.putExtra(Intent.EXTRA_SUBJECT, "Smart Petrol Calculator");
