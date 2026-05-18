@@ -4,103 +4,127 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#F5F7FA">
+    android:background="#F5F7FA"
+    android:fitsSystemWindows="true">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbarHome"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
+        android:layout_height="56dp"
         android:background="#E7549E"
-        android:title="Smart Petrol Calculator"
+        android:title="SmartPetrolCalculator"
         android:titleTextColor="#FFFFFF"
         app:titleTextColor="#FFFFFF" />
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:fillViewport="true">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:gravity="center_horizontal"
-            android:padding="24dp">
-
-            <ImageView
-                android:layout_width="110dp"
-                android:layout_height="110dp"
-                android:src="@mipmap/ic_launcher"
-                android:contentDescription="Application Icon"
-                android:layout_marginTop="35dp"
-                android:layout_marginBottom="20dp" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Smart Petrol Cost Calculator"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                android:textColor="#1E1E1E"
-                android:gravity="center"
-                android:layout_marginBottom="10dp" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Estimate petrol cost and BUDI MADANI rebate easily."
-                android:textSize="16sp"
-                android:textColor="#555555"
-                android:gravity="center"
-                android:layout_marginBottom="32dp" />
+            android:paddingLeft="24dp"
+            android:paddingTop="42dp"
+            android:paddingRight="24dp"
+            android:paddingBottom="40dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:background="#FFFFFF"
-                android:padding="20dp"
-                android:layout_marginBottom="20dp">
+                android:gravity="center_horizontal"
+                android:background="@drawable/bg_card"
+                android:elevation="6dp"
+                android:paddingLeft="24dp"
+                android:paddingTop="32dp"
+                android:paddingRight="24dp"
+                android:paddingBottom="30dp">
+
+                <FrameLayout
+                    android:layout_width="118dp"
+                    android:layout_height="118dp"
+                    android:layout_marginBottom="22dp">
+
+                    <View
+                        android:layout_width="118dp"
+                        android:layout_height="118dp"
+                        android:background="@drawable/bg_icon_circle" />
+
+                    <ImageView
+                        android:layout_width="86dp"
+                        android:layout_height="86dp"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/ic_launcher"
+                        android:contentDescription="Application Icon" />
+
+                </FrameLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Smart Petrol Cost Calculator"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="#1E1E1E"
+                    android:gravity="center"
+                    android:layout_marginBottom="10dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Calculate petrol cost and BUDI MADANI rebate quickly and easily."
+                    android:textSize="14sp"
+                    android:textColor="#666666"
+                    android:gravity="center"
+                    android:lineSpacingExtra="3dp"
+                    android:layout_marginBottom="32dp" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Choose an option"
-                    android:textSize="18sp"
+                    android:textSize="16sp"
                     android:textStyle="bold"
-                    android:textColor="#222222"
+                    android:textColor="#E7549E"
                     android:gravity="center"
-                    android:layout_marginBottom="20dp" />
+                    android:layout_marginBottom="16dp" />
 
                 <Button
                     android:id="@+id/btnGoCalculate"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="54dp"
                     android:text="Calculate Petrol Cost"
                     android:textAllCaps="false"
-                    android:textSize="16sp"
-                    android:backgroundTint="#E7549E"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
                     android:textColor="#FFFFFF"
-                    android:layout_marginBottom="14dp" />
+                    android:background="@drawable/bg_button_pink"
+                    android:layout_marginBottom="12dp" />
 
                 <Button
                     android:id="@+id/btnGoAbout"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="54dp"
                     android:text="About Application"
                     android:textAllCaps="false"
-                    android:textSize="16sp"
-                    android:backgroundTint="#E7549E"
-                    android:textColor="#FFFFFF" />
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:background="@drawable/bg_button_pink" />
 
             </LinearLayout>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Malaysia Petrol Cost Calculator"
-                android:textSize="14sp"
-                android:textColor="#777777"
-                android:gravity="center" />
+                android:text="♡ Malaysia Petrol Cost Calculator"
+                android:textSize="13sp"
+                android:textColor="#999999"
+                android:gravity="center"
+                android:layout_marginTop="24dp" />
 
         </LinearLayout>
 
